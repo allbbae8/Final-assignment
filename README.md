@@ -8,15 +8,11 @@ The goal is to demonstrate key data analysis steps, starting from fixing data qu
 Project Structure:
 
 DA-final_assignment/
-│
-├── data/
-│ └── hotels-vienna.csv # Original dataset
-│
-├── vienna_hotels_clean.csv # Cleaned and prepared dataset
-│
-├── main.py # Main Python script (contains all tasks)
-│
-└── README.md # Project description and guide
+data/
+hotels-vienna.csv # Original dataset
+vienna_hotels_clean.csv # Cleaned and prepared dataset
+main.py # Main Python script (contains all tasks)
+README.md # Project description and guide
 
 This covers multiple small tasks that show data analysis skills. In order of the file: 
 
