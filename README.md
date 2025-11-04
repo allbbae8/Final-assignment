@@ -14,14 +14,18 @@ vienna_hotels_clean.csv # Cleaned and prepared dataset
 main.py # Main Python script (contains all tasks)
 README.md # Project description and guide
 
-This covers multiple small tasks that show data analysis skills. In order of the file: 
+This covers multiple small tasks that show data analysis skills. 
+
+PYTHON part 
+
+In order of the file: 
 
 Task 3: Lists and Dictionaries
 1. Demonstrates how to use Python lists and dictionaries.
 2. Filters data using a list of neighborhoods.
 3. Compares each hotel’s price with a type’s average using a dictionary.
 
-Task 5: Fixing Data Quality
+Task 5: Fixing Data 
 1. Identifies numeric and categorical columns.
 2. Converts incorrect data types.
 3. Fills missing numeric values with the mean.
@@ -42,8 +46,41 @@ Task 8: Summary Statistics
 1. Uses `pandas.describe()` to show mean, min, max, std, etc.
 2. Provides an overview of numeric variables.
 
-Task 9: Visualization
+Task 9: Graph
 1. Calculates average hotel price by accommodation type.
 2. Creates a simple bar chart using `matplotlib`.
 
+STATA part
+
+The same dataset and analytical steps were repeated using Stata to demonstrate data handling in another statistical environment.  
+All Stata code is written inside the .do file.
+
+Task 4: The code and each step with comments are written in the .do file
+
+Task 5: Fixing Data
+1. Checks for missing values using `misstable summarize`.  
+2. Replaces missing numeric values with the variable mean.  
+3. Replaces missing string values with `"Unknown"`.  
+4. Verifies corrections with `misstable summarize` again.
+
+Task 6: Data Prep
+1. Keeps only hotels in Vienna with price > 50 and rating > 4.  
+2. Selects only important columns (`city`, `neighbourhood`, `price`, `stars`, `rating`, `distance`, `accommodation_type`).  
+3. Creates new variables:  
+   - `price_per_star` = price / stars  
+   - `log_price` = log(price)  
+   - `near_center` = distance < 2
   
+Task 7: Save Clean Data
+Exports the cleaned dataset into `vienna_hotels_clean.csv` using `export delimited`.
+
+Task 8: Summary Statistics
+Generates descriptive statistics for numeric variables with `summarize` and `describe`.
+
+Task 9: Graph
+Creates a bar chart of average prices by accommodation type.
+
+
+
+
+
